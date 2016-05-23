@@ -1,4 +1,6 @@
 
+//Sortare prin selectie
+
 public class Sorting {
 
 	public static void main(String[] args) {
@@ -38,5 +40,7 @@ public class Sorting {
 		    {    System.out.print(p);    }
 		    System.out.println();
 		}
+
 	}
+
 }
