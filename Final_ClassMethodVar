@@ -1,0 +1,15 @@
+/*
+ * Final keyword has numerous way to use
+ * 
+ * A final class cannot be subclassed.
+ * A final method cannot by overridden by subclasses
+ * A final variable can only be initialized once.
+ */
+public class Final_ClassMethodVar {
+	public final int number ;
+	
+	Hello() {
+		number = 10;
+	}
+
+}
