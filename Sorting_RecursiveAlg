@@ -1,0 +1,61 @@
+
+//Sortare prin interclasare
+
+public class Sorting_withRecursiveAlg{
+/* Functia mergeSort sorteaza datele dintr-un array
+* -parametrii transmisi sunt array-ul cu datele ce trebuiesc sortate,
+*  un array temporar (temp) utilizat la calcule
+*  si doua valori intregi care indica inceputul si sfarsitul
+*  sectiunii din array ce trebuie ordonata
+*/
+	public static void mergeSort(int[] dataArray, int[] tempArray, int start, int end)
+	{
+	    // daca start = end, array-ul a fost sortat
+	    if(start==end)
+	        return;
+	    // altfel imparte array-ul in 2 sectiuni
+	    else
+	    {
+	        //calculeaza centrul array-ului
+	        int center = (start+end)/2;
+	 
+	        //apeleaza mergeSort pentru prima jumatate
+	        mergeSort(dataArray, tempArray, start, center);
+	 
+	        //apeleaza mergeSort pentru cea de-a doua jumatate
+	        mergeSort(dataArray, tempArray, center+1, end);
+	 
+	        //uneste jumatatile intr-un singur array
+	        int firstIndex = start;
+	        int secondIndex = center+1;
+	        int thirdIndex = start;
+	 
+	        //parcurge ambele parti
+	        while(thirdIndex<=end)
+	        {
+	                /* parcurge partile
+	                 * inserand cel mai mic element
+	                 * in array-ul temp
+	                 */
+	            if(secondIndex>end ||
+	            (firstIndex<=center &&
+	            dataArray[firstIndex]<=dataArray[secondIndex]))
+	            {
+	                tempArray[thirdIndex]=dataArray[firstIndex];
+	                thirdIndex++;
+	                firstIndex++;
+	            }
+	            else
+	            {
+	                tempArray[thirdIndex]=dataArray[secondIndex];
+	                thirdIndex++;
+	                secondIndex++;
+	            }
+	        }
+	 
+	        //copiaza continutul array-ului temp in array-ul principal
+	        for(int i=start; i<=end; i++)
+	            dataArray[i]=tempArray[i];
+    	}
+  }
+}
