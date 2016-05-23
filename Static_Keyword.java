@@ -1,7 +1,7 @@
 
 public class Static_Keyword {
 //what does the static keyword do in a class?
-	public static String DoSomething(String[] args) {
+	public static String DoSomething(String message) {
 		//accessed using the class itself
 		return message;
 		//static members belong to the class instead of
