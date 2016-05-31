@@ -1,5 +1,8 @@
 package snake;
-
+/*
+ * author Jaryt Bustard
+ */
+ 
 import java.awt.Graphics;
 import java.awt.Color;
 import java.awt.Point;
