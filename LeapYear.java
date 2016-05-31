@@ -3,11 +3,6 @@ import java.util.Scanner;
 
 public class LeapYear {
 
-	/**
-	 * Determine if a year is a leap year
-	 * 
-	 * @author Drausin Wulsin
-	 */
 	public static void main(String[] args) {
 		
 		// declare our Scanner object to read input from the user
