@@ -3,13 +3,6 @@ import java.util.Scanner;
 
 public class Fibonacci {
 
-	/**
-	 * Print out numbers in the Fibonacci sequence.
-	 * 
-	 * @author Drausin Wulsin
-	 * @since 04/24/2013
-	 * 
-	 */
 	public static void main(String[] args) {
 		
 		int numToPrint;
