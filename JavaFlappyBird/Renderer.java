@@ -1,5 +1,8 @@
 package flappyBird;
-
+/*
+ * author Jaryt Bustard
+ */
+ 
 import java.awt.Graphics;
 
 import javax.swing.JPanel;
