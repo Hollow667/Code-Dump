@@ -1,0 +1,1 @@
+Add image.jpg to "drawables" folder in Android Studio.
