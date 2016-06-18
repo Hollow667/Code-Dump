@@ -1,6 +1,7 @@
-#For Linux - Sniffs all incoming and outgoing packets
+#For Linux - Sniffs all incoming and outgoing packets :)
 
 import socket
+#import struct
 from struct import *
 
 #Convert a string of 6 characters of ethernet address into a dash separated hex string
@@ -25,7 +26,7 @@ while True:
     eth_header = packet[:eth_length]
     eth = unpack('!6s6sH' , eth_header)
     eth_protocol = socket.ntohs(eth[2])
-    print 'Destination MAC : ' + eth_addr(packet[0:6]) + ' Source MAC : ' +eth_addr(packet[6:12]) + ' Protocol : ' + str(eth_protocol)
+    print 'Destinatie MAC : ' + eth_addr(packet[0:6]) + ' Sursa MAC : ' +eth_addr(packet[6:12]) + ' Protocol : ' + str(eth_protocol)
 
     #Parse IP packets
     if eth_protocol == 8 :
@@ -48,32 +49,32 @@ while True:
         s_addr = socket.inet_ntoa(iph[8]);
         d_addr = socket.inet_ntoa(iph[9]);
 
-        print 'Version : ' + str(version) + ' IP Header Length : ' + str(ihl) + ' TTL : ' +str(ttl) + ' Protocol : ' + str(protocol) + ' Source Address : ' + str(s_addr) + ' Destination Address : ' + str(d_addr)
+        print 'Versiune : ' + str(version) + ' IP Lungime Header : ' + str(ihl) + ' TTL : ' +str(ttl) + ' Protocol : ' + str(protocol) + ' Adresa Expediere : ' + str(s_addr) + ' Adresa : ' + str(d_addr)
 
     #TCP protocol
 	if protocol == 6 :
-	    t = iph_length + eth_length
-	    tcp_header = packet[t:t+20]
+		t = iph_length + eth_length
+		tcp_header = packet[t:t+20]
 
-        #now unpack them
-	    tcph = unpack('!HHLLBBHHH' , tcp_header)
+		#now unpack them
+		tcph = unpack('!HHLLBBHHH' , tcp_header)
 
-	    source_port = tcph[0]
-	    dest_port = tcph[1]
-	    sequence = tcph[2]
-	    acknowledgement = tcph[3]
-	    doff_reserved = tcph[4]
-	    tcph_length = doff_reserved >> 4
+		source_port = tcph[0]
+		dest_port = tcph[1]
+		sequence = tcph[2]
+		acknowledgement = tcph[3]
+		doff_reserved = tcph[4]
+		tcph_length = doff_reserved >> 4
 
-	    print 'Source Port : ' + str(source_port) + ' Dest Port : ' + str(dest_port) + ' Sequence Number : ' + str(sequence) + ' Acknowledgement : ' + str(acknowledgement) + ' TCP header length : ' + str(tcph_length)
+		print ' Port Sursa : ' + str(source_port) + ' Port Destinatar : ' + str(dest_port) + ' Numar Secvential : ' + str(sequence) + ' 			Confirmare : ' + str(acknowledgement) + ' TCP lungime header : ' + str(tcph_length)
 
-	    h_size = eth_length + iph_length + tcph_length * 4
-	    data_size = len(packet) - h_size
+		h_size = eth_length + iph_length + tcph_length * 4
+		data_size = len(packet) - h_size
 
-        #get data from the packet
-	    data = packet[data_size:]
+		#get data from the packet
+		data = packet[data_size:]
 
-	    print 'Data : ' + data
+		print 'Data : ' + data
     #ICMP Packets
 	elif protocol == 1 :
 	    u = iph_length + eth_length
@@ -87,7 +88,7 @@ while True:
 	    code = icmph[1]
 	    checksum = icmph[2]
 
-	    print 'Type : ' + str(icmp_type) + ' Code : ' + str(code) + ' Checksum : ' +str(checksum)
+	    print 'Tipul : ' + str(icmp_type) + ' Cod : ' + str(code) + ' Checksum : ' +str(checksum)
 
 	    h_size = eth_length + iph_length + icmph_length
 	    data_size = len(packet) - h_size
@@ -95,7 +96,7 @@ while True:
         #get data from the packet
 	    data = packet[data_size:]
 
-	    print 'Data : ' + data
+	    print 'Date : ' + data
 
     #UDP packets
 	elif protocol == 17 :
@@ -111,16 +112,16 @@ while True:
 	    length = udph[2]
 	    checksum = udph[3]
 
-	    print 'Source Port : ' + str(source_port) + ' Dest Port : ' + str(dest_port) + ' Length : ' + str(length) + ' Checksum : ' + str(checksum)
+	    print ' Port Sursa : ' + str(source_port) + ' Port Destinatar : ' + str(dest_port) + ' Lungime : ' + str(length) + ' Checksum : ' 				+ str(checksum)
 
 	    h_size = eth_length + iph_length + udph_length
 	    data_size = len(packet) - h_size
         #get data from the packet
 	    data = packet[data_size:]
 
-	    print 'Data : ' + data
+	    print 'Date : ' + data
 
     #some other IP packet like IGMP
 	else :
-	    print 'Protocol other than TCP/UDP/ICMP'
-	    print
+		print 'Protocolul nu e TCP/UDP/ICMP'
+		print
