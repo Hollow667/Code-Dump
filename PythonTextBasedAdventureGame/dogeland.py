@@ -1,6 +1,4 @@
 import time
-import random
-from random import randint
 
 print('\n' * 100)
 print('\n\n[-Aventurile lui Dognald Trump (DEMO): by Zero Davila -]')
