@@ -26,7 +26,6 @@ def sockstress(target,dstport):
 		except:
 			pass
 
-# Oprirea atacului si restaurare IPTable.
 def graceful_shutdown(signal, frame):
 	print '\nAi tastat Ctrl+C!'
 	print 'Restaurare'
