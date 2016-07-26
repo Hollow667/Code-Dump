@@ -26,8 +26,10 @@ def sockstress(target,dstport):
 		except:
 			pass
 
+# Abort si restaurare IPTables
 def graceful_shutdown(signal, frame):
 	print '\nAi tastat Ctrl+C!'
+	print '\nRestaurare IPTables'
 	os.system('iptables -A OUTPUT -p tcp --tcp-flags RST RST -d ' + target + ' -j DROP')
 	sys.exit()
 
