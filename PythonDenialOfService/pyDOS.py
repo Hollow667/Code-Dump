@@ -28,7 +28,6 @@ def sockstress(target,dstport):
 
 def graceful_shutdown(signal, frame):
 	print '\nAi tastat Ctrl+C!'
-	print 'Restaurare'
 	os.system('iptables -A OUTPUT -p tcp --tcp-flags RST RST -d ' + target + ' -j DROP')
 	sys.exit()
 
