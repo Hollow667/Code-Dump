@@ -1,25 +1,21 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
 import zipfile
 import optparse
 from threading import Thread
 
-
 def extractFile(zFile, password):
     try:
         zFile.extractall(pwd=password)
-        print '[+] Found password ' + password + '\n'
+        print '[+] Parola identificata ' + password + '\n'
     except:
         pass
 
-
 def main():
-    parser = optparse.OptionParser("usage %prog "+\
-      "-f <zipfile> -d <dictionary>")
+    parser = optparse.OptionParser("utilizare %prog "+\
+      "-f <fisierzip> -d <dictionar>")
     parser.add_option('-f', dest='zname', type='string',\
-      help='specify zip file')
+      help='specifica fisierul zip')
     parser.add_option('-d', dest='dname', type='string',\
-      help='specify dictionary file')
+      help='specifica fisierul dictionar')
     (options, args) = parser.parse_args()
     if (options.zname == None) | (options.dname == None):
         print parser.usage
