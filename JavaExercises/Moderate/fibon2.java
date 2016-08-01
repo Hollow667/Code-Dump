@@ -1,8 +1,5 @@
 import java.util.Scanner;
- 
-/**
- * @author Crunchify.com
- */
+
 public class fibon2 {
  
     @SuppressWarnings("resource")
