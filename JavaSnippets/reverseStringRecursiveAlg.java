@@ -18,4 +18,3 @@ public class StringRecursiveReversal {
         System.out.println("Result: "+srr.reverseString("Java2novice"));
     }
 }
-- See more at: http://www.java2novice.com/java-interview-programs/string-reverse-recursive/#sthash.9RddyOMK.dpuf
