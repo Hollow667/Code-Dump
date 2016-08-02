@@ -59,4 +59,3 @@ public class MyLongestSubstr {
         System.out.println(mls.getLongestSubstr("abcabcbb"));
     }
 }
-- See more at: http://www.java2novice.com/java-interview-programs/longest-substring/#sthash.ligVZDrF.dpuf
