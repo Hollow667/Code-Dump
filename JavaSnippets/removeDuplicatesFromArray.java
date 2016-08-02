@@ -31,4 +31,3 @@ public class MyDuplicateElements {
         }
     }
 }
-- See more at: http://www.java2novice.com/java-interview-programs/remove-duplicates-sorted-array/#sthash.JbTUrp9l.dpuf
