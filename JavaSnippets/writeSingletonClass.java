@@ -23,4 +23,3 @@ public class MySingleton {
         ms.testMe();
     }
 }
-- See more at: http://www.java2novice.com/java-interview-programs/java-singleton/#sthash.FvDEWj5c.dpuf
