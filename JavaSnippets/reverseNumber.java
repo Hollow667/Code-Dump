@@ -15,4 +15,3 @@ public class NumberReverse {
         System.out.println("Result: "+nr.reverseNumber(17868));
     }
 }
-- See more at: http://www.java2novice.com/java-interview-programs/reverse-number/#sthash.p6NGD5Dw.dpuf
