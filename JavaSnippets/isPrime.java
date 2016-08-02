@@ -17,4 +17,3 @@ public class MyPrimeNumCheck {
         System.out.println("Is 15 prime number? "+mpc.isPrimeNumber(15));
     }
 }
-- See more at: http://www.java2novice.com/java-interview-programs/is-prime-number/#sthash.CarYmthr.dpuf
