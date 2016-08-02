@@ -49,4 +49,3 @@ public class MyDistinctFileWords {
         }
     }
 }
-- See more at: http://www.java2novice.com/java-interview-programs/distinct-word-list/#sthash.PIwqiaMo.dpuf
