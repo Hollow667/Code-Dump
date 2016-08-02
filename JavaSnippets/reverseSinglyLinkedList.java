@@ -90,4 +90,3 @@ class Node<T> implements Comparable<T> {
         }
     }
 }
-- See more at: http://www.java2novice.com/java-interview-programs/revese-singly-linked-list/#sthash.vajpIcA2.dpuf
