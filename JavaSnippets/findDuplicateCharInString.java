@@ -28,4 +28,3 @@ public class DuplicateCharsInString {
         dcs.findDuplicateChars("Java2Novice");
     }
 }
-- See more at: http://www.java2novice.com/java-interview-programs/duplicate-string-character-count/#sthash.TJZemwX0.dpuf
