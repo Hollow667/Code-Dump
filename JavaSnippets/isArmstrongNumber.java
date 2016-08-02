@@ -30,4 +30,3 @@ public class MyArmstrongNumber {
         System.out.println("Is 153 Armstrong number? "+man.isArmstrongNumber(153));
     }
 }
-- See more at: http://www.java2novice.com/java-interview-programs/armstrong-number/#sthash.wxJpt0o3.dpuf
