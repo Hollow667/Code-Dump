@@ -18,4 +18,3 @@ public class MyNumberSumRec {
         System.out.println("Sum is: "+mns.getNumberSum(223));
     }
 }
-- See more at: http://www.java2novice.com/java-interview-programs/number-sum-recursive/#sthash.KTbDs0oH.dpuf
