@@ -31,4 +31,3 @@ public class DuplicateNumber {
         System.out.println("Duplicate Number: "+dn.findDuplicateNumber(numbers));
     }
 }
-- See more at: http://www.java2novice.com/java-interview-programs/duplicate-number/#sthash.VipsyVcq.dpuf
