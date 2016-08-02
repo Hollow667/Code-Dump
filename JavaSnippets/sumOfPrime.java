@@ -25,4 +25,3 @@ public class Main {
         return true;
     }
 }
-- See more at: http://www.java2novice.com/java-interview-programs/prime-sum/#sthash.8Zdwi5We.dpuf
