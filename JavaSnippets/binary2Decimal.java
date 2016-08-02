@@ -24,4 +24,3 @@ public class BinaryToDecimal {
         System.out.println("100110 ===> "+bd.getDecimalFromBinary(100110));
     }
 }
-- See more at: http://www.java2novice.com/java-interview-programs/binary-to-decimal/#sthash.0pzSb8xu.dpuf
