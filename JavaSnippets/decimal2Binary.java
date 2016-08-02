@@ -17,4 +17,4 @@ public class DecimalToBinary {
         dtb.printBinaryFormat(25);
     }
 }
-b
+
