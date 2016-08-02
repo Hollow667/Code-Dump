@@ -21,4 +21,3 @@ public class TwoMaxNumbers {
         tmn.printTwoMaxNumbers(num);
     }
 }
-- See more at: http://www.java2novice.com/java-interview-programs/two-max-numbers-in-array/#sthash.4TzNtLOv.dpuf
