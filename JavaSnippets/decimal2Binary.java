@@ -17,4 +17,4 @@ public class DecimalToBinary {
         dtb.printBinaryFormat(25);
     }
 }
-- See more at: http://www.java2novice.com/java-interview-programs/decimal-to-binary/#sthash.7ZDoxvOE.dpuf
+b
