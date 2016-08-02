@@ -73,4 +73,3 @@ public class MaxWordCountInLine {
         }
     }
 }
-- See more at: http://www.java2novice.com/java-interview-programs/line-max-word-count/#sthash.NmXvKFfa.dpuf
