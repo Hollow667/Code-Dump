@@ -35,4 +35,3 @@ public class FindMiddleIndex {
         }
     }
 }
-- See more at: http://www.java2novice.com/java-interview-programs/find-middle-index/#sthash.s9pmk5Lc.dpuf
