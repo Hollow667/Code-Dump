@@ -22,4 +22,3 @@ public class IsPerfectNumber {
         System.out.println("Is perfect number: "+ipn.isPerfectNumber(28));
     }
 }
-- See more at: http://www.java2novice.com/java-interview-programs/perfect-number/#sthash.BIy5VJZI.dpuf
