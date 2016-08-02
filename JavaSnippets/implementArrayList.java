@@ -70,4 +70,3 @@ public class MyArrayList {
         }
     }
 }
-- See more at: http://www.java2novice.com/java-interview-programs/arraylist-implementation/#sthash.tWXgXbwk.dpuf
