@@ -33,4 +33,3 @@ public class StackSort {
         System.out.println("final sorted list: "+sortStack(input));
     }
 }
-- See more at: http://www.java2novice.com/java-interview-programs/stack-sorting/#sthash.5Anne1YC.dpuf
