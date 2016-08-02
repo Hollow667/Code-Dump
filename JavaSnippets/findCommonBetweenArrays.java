@@ -12,4 +12,3 @@ public class CommonElementsInArray {
         }
     }
 }
-- See more at: http://www.java2novice.com/java-interview-programs/common-elements-in-two-arrays/#sthash.P7xHq3oM.dpuf
