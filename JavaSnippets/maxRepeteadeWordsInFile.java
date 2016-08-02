@@ -71,4 +71,3 @@ public class MaxDuplicateWordCount {
         }
     }
 }
-- See more at: http://www.java2novice.com/java-interview-programs/max-repeated-words-file/#sthash.CFk8a1uA.dpuf
