@@ -14,4 +14,3 @@ public class MySwapingTwoNumbers {
         System.out.println("y value: "+y);
     }
 }
-- See more at: http://www.java2novice.com/java-interview-programs/swap-two-numbers/#sthash.KmfU17iy.dpuf
