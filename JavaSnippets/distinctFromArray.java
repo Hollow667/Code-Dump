@@ -22,4 +22,3 @@ public class MyDisticntElements {
         MyDisticntElements.printDistinctElements(nums);
     }
 }
-- See more at: http://www.java2novice.com/java-interview-programs/distinct-elements/#sthash.Ae2kD5Ho.dpuf
