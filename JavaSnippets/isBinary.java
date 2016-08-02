@@ -24,4 +24,3 @@ public class MyBinaryCheck {
         System.out.println("Is 10300111 binary? :"+mbc.isBinaryNumber(10300111));
     }
 }
-- See more at: http://www.java2novice.com/java-interview-programs/is-binary-number/#sthash.jelePp01.dpuf
