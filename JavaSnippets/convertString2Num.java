@@ -20,4 +20,3 @@ public class MyStringToNumber {
         System.out.println("\"90087\" == "+convert_String_To_Number("90087"));
     }
 }
-- See more at: http://www.java2novice.com/java-interview-programs/string-to-number/#sthash.42NU1YMf.dpuf
