@@ -33,4 +33,3 @@ public class MyDeadlock {
         mdl.trd2.start();
     }
 }
-- See more at: http://www.java2novice.com/java-interview-programs/thread-deadlock/#sthash.Fz9ZsZqe.dpuf
