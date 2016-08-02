@@ -60,4 +60,4 @@ class Price{
         return "item: "+item+"  price: "+price;
     }
 }
-- See more at: http://www.java2novice.com/java-interview-programs/equals-hashcode/#sthash.Wt0Ly56X.dpuf
+
