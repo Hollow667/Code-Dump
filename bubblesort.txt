@@ -1,4 +1,4 @@
-Algoritm de sortare Bubble Sort.
+      Algoritm de sortare Bubble Sort.
 
 
               ARRAY NESORTAT
