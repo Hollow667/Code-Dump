@@ -1,0 +1,17 @@
+
+#:kivy 1.0.9
+
+<BouncyBall>:
+    size: 50, 50
+    canvas:
+        Ellipse:
+            pos: self.pos
+            size: self.size
+
+
+<BallBounce>:
+    ball: bouncy_ball
+
+    BouncyBall:
+        id: bouncy_ball
+        center: self.parent.center
