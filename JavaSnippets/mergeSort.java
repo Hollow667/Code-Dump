@@ -1,64 +1,58 @@
-public class MyMergeSort {
-     
-    private int[] array;
-    private int[] tempMergArr;
-    private int length;
- 
-    public static void main(String a[]){
-         
-        int[] inputArr = {45,23,11,89,77,98,4,28,65,43};
-        MyMergeSort mms = new MyMergeSort();
-        mms.sort(inputArr);
-        for(int i:inputArr){
-            System.out.print(i);
-            System.out.print(" ");
-        }
-    }
-     
-    public void sort(int inputArr[]) {
-        this.array = inputArr;
-        this.length = inputArr.length;
-        this.tempMergArr = new int[length];
-        doMergeSort(0, length - 1);
-    }
- 
-    private void doMergeSort(int lowerIndex, int higherIndex) {
-         
-        if (lowerIndex < higherIndex) {
-            int middle = lowerIndex + (higherIndex - lowerIndex) / 2;
-            // Below step sorts the left side of the array
-            doMergeSort(lowerIndex, middle);
-            // Below step sorts the right side of the array
-            doMergeSort(middle + 1, higherIndex);
-            // Now merge both sides
-            mergeParts(lowerIndex, middle, higherIndex);
-        }
-    }
- 
-    private void mergeParts(int lowerIndex, int middle, int higherIndex) {
- 
-        for (int i = lowerIndex; i <= higherIndex; i++) {
-            tempMergArr[i] = array[i];
-        }
-        int i = lowerIndex;
-        int j = middle + 1;
-        int k = lowerIndex;
-        while (i <= middle && j <= higherIndex) {
-            if (tempMergArr[i] <= tempMergArr[j]) {
-                array[k] = tempMergArr[i];
-                i++;
-            } else {
-                array[k] = tempMergArr[j];
-                j++;
-            }
-            k++;
-        }
-        while (i <= middle) {
-            array[k] = tempMergArr[i];
-            k++;
-            i++;
-        }
- 
-    }
-}
+public class Mergesort {
+  private int[] numbers;
+  private int[] helper;
 
+  private int number;
+
+  public void sort(int[] values) {
+    this.numbers = values;
+    number = values.length;
+    this.helper = new int[number];
+    mergesort(0, number - 1);
+  }
+
+  private void mergesort(int low, int high) {
+    // check if low is smaller then high, if not then the array is sorted
+    if (low < high) {
+      // Get the index of the element which is in the middle
+      int middle = low + (high - low) / 2;
+      // Sort the left side of the array
+      mergesort(low, middle);
+      // Sort the right side of the array
+      mergesort(middle + 1, high);
+      // Combine them both
+      merge(low, middle, high);
+    }
+  }
+
+  private void merge(int low, int middle, int high) {
+
+    // Copy both parts into the helper array
+    for (int i = low; i <= high; i++) {
+      helper[i] = numbers[i];
+    }
+
+    int i = low;
+    int j = middle + 1;
+    int k = low;
+    // Copy the smallest values from either the left or the right side back
+    // to the original array
+    while (i <= middle && j <= high) {
+      if (helper[i] <= helper[j]) {
+        numbers[k] = helper[i];
+        i++;
+      } else {
+        numbers[k] = helper[j];
+        j++;
+      }
+      k++;
+    }
+    // Copy the rest of the left side of the array into the target array
+    while (i <= middle) {
+      numbers[k] = helper[i];
+      k++;
+      i++;
+    }
+
+  }
+} 
