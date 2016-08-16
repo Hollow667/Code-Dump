@@ -8,12 +8,12 @@ import java.text.SimpleDateFormat;
 
 public class TabGen {
 
-    public static void tabGen(int n, String t) {
+    public static void tabGen(String f, String t, int n) {
         
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         Date date = new Date();
         try {
-            File file = new File("newFile.txt");
+            File file = new File(f + ".txt");
             if (file.exists()) {
                 file.createNewFile();
             }
@@ -41,19 +41,18 @@ public class TabGen {
     public static void main(String[] args) {
 
         Scanner one = new Scanner(System.in);
-        System.out.println("\nTitlul tabulaturii :");
-        String title = one.next(); 
+        System.out.println("\nDenumirea fisierului :");
+        String file = one.next();
 
         Scanner two = new Scanner(System.in);
+        System.out.println("\nTitlul tabulaturii :");
+        String title = two.next(); 
+
+        Scanner three = new Scanner(System.in);
         System.out.println("\nNumarul de linii :");
-        String response = two.next();
-        Integer lines = Integer.valueOf(response);
+        int lines = three.nextInt();
         
-        tabGen(lines,title);
+        tabGen(file,title,lines);
         System.out.println("\nDone.");
     }
 }
-
-
-
-
