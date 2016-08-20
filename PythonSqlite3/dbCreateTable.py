@@ -1,16 +1,15 @@
-#!/usr/bin/python
 
 import sqlite3
 
 conn = sqlite3.connect('test.db')
-print "Opened database successfully";
+print "Baza de date a fost deschisa.";
 
-conn.execute('''CREATE TABLE COMPANY
+conn.execute('''CREATE TABLE EXEMPLU
        (ID INT PRIMARY KEY     NOT NULL,
-       NAME           TEXT    NOT NULL,
-       AGE            INT     NOT NULL,
-       ADDRESS        CHAR(50),
-       SALARY         REAL);''')
-print "Table created successfully";
+       NUME           TEXT    NOT NULL,
+       VARSTA            INT     NOT NULL,
+       ADRESA       CHAR(50),
+       SALAR         REAL);''')
+print "Proces incheiat.";
 
 conn.close()
