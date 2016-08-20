@@ -15,12 +15,12 @@ def crackSHA1Hash(_file,_hash):
                         cracked = True
                         break
         if(not cracked):
-                print "[-] Unable to crack the hash."
+                print "[-] Crack esuat."
                 
 def main():
         argparser = optparse.OptionParser("Utilizare -f <fisier wordlist> -p <hash>")
-        argparser.add_option('-f', dest='filename',type='string',help='Please specify a word list')
-        argparser.add_option('-p', dest='passhash',type='string',help='Please specify a password hash to be cracked')
+        argparser.add_option('-f', dest='filename',type='string',help='Specifica dictionarul.')
+        argparser.add_option('-p', dest='passhash',type='string',help='Specifica un hash.')
         (options, arg) = argparser.parse_args()
         if (options.filename == None) | (options.passhash == None):
                 print argparser.usage
@@ -28,7 +28,7 @@ def main():
         else:
                 filename = options.filename
                 passhash = options.passhash
-                print "[*] Cracking hash ..."
+                print "[*] Atentare crack ..."
         crackSHA1Hash(filename,passhash)
 
 if __name__ == '__main__':
