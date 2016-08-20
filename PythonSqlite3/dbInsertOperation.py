@@ -1,22 +1,21 @@
-#!/usr/bin/python
 
 import sqlite3
 
 conn = sqlite3.connect('test.db')
-print "Opened database successfully";
+print "Baza de date a fost deschisa.";
 
-conn.execute("INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) \
-      VALUES (1, 'Paul', 32, 'California', 20000.00 )");
+conn.execute("INSERT INTO EXEMPLU (ID,NUME,VARSTA,ADRESA,SALAR) \
+      VALUES (1, 'Paul', 32, 'Brasov', 2000.00 )");
 
-conn.execute("INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) \
-      VALUES (2, 'Allen', 25, 'Texas', 15000.00 )");
+conn.execute("INSERT INTO EXEMPLU (ID,NUME,VARSTA,ADRESA,SALAR) \
+      VALUES (2, 'Andrei', 25, 'Iasi', 2000.00 )");
 
-conn.execute("INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) \
-      VALUES (3, 'Teddy', 23, 'Norway', 20000.00 )");
+conn.execute("INSERT INTO EXEMPLU (ID,NUME,VARSTA,ADRESA,SALAR) \
+      VALUES (3, 'Teodor', 23, 'Timisoara', 1500.00 )");
 
-conn.execute("INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) \
-      VALUES (4, 'Mark', 25, 'Rich-Mond ', 65000.00 )");
+conn.execute("INSERT INTO EXEMPLU (ID,NUME,VARSTA,ADRESA,SALAR) \
+      VALUES (4, 'Adnana', 25, 'Bucuresti', 1800.00 )");
 
 conn.commit()
-print "Records created successfully";
+print "Proces incheiat.";
 conn.close()
