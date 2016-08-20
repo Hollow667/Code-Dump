@@ -1,20 +1,19 @@
-#!/usr/bin/python
 
 import sqlite3
 
 conn = sqlite3.connect('test.db')
-print "Opened database successfully";
+print "Baza de date a fost deschisa.";
 
-conn.execute("UPDATE COMPANY set SALARY = 25000.00 where ID=1")
+conn.execute("UPDATE EXEMPLU set SALAR = 25000.00 where ID=1")
 conn.commit
-print "Total number of rows updated :", conn.total_changes
+print "Numarul de randuri actualizate :", conn.total_changes
 
-cursor = conn.execute("SELECT id, name, address, salary  from COMPANY")
+cursor = conn.execute("SELECT id, nume, adresa, salar  from EXEMPLU")
 for row in cursor:
    print "ID = ", row[0]
-   print "NAME = ", row[1]
-   print "ADDRESS = ", row[2]
-   print "SALARY = ", row[3], "\n"
+   print "NUME = ", row[1]
+   print "ADRESA = ", row[2]
+   print "SALAR = ", row[3], "\n"
 
-print "Operation done successfully";
+print "Proces incheiat.";
 conn.close()
