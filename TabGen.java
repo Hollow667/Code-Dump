@@ -8,10 +8,12 @@ import java.text.SimpleDateFormat;
 
 public class TabGen {
 
-    public static void tabGen(String f, String t, int n) {
+    public static void tabGen(String f, String t, int n, int l) {
         
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         Date date = new Date();
+	    StringBuffer partBuffer = new StringBuffer();
+
         try {
             File file = new File(f + ".txt");
             if (file.exists()) {
@@ -21,15 +23,20 @@ public class TabGen {
             pw.println("\n");
             pw.println("    " + t);
             pw.println("    " + dateFormat.format(date));
+
+	        for(int k = l; k > 0; k--) {
+		    partBuffer.append("-");
+	        }
+		    String var = partBuffer.toString();
+
             for(int i = n; i > 0; i--) {
                 pw.println("\n");
-                pw.println("----------------------------------------------------------------------");
-                pw.println("----------------------------------------------------------------------");
-                pw.println("----------------------------------------------------------------------");
-                pw.println("----------------------------------------------------------------------");
-                pw.println("----------------------------------------------------------------------");
-                pw.println("----------------------------------------------------------------------");
-
+		        pw.println(var);
+		        pw.println(var);
+		        pw.println(var);
+		        pw.println(var);
+		        pw.println(var);
+		        pw.println(var);
             }
             pw.close();           
 
@@ -51,8 +58,13 @@ public class TabGen {
         Scanner three = new Scanner(System.in);
         System.out.println("\nNumarul de linii :");
         int lines = three.nextInt();
+
+        Scanner four = new Scanner(System.in);
+        System.out.println("\nLungimea liniilor :");
+        int length = four.nextInt();
         
-        tabGen(file,title,lines);
+        tabGen(file,title,lines,length);
         System.out.println("\nDone.");
     }
 }
+
