@@ -9,7 +9,7 @@ read -p "Sleep time> " SLEEP
 read -p "Pre seconds> " PRE
 echo
 
-while [[ $pre -le PRE ]]
+while [[ $pre -le $PRE ]]
 do
     printf "...$pre"
     pre=$((pre+1))
