@@ -77,8 +77,8 @@ then
     echo "[*] The command about to be executed is :"
     echo "[!] dd if=/dev/zero of=/dev/sdX bs=1M"
     echo "[*] Replace X with the target drive letter."
-    echo "[*] \'a\' is the first HD, \'b\' is the second, etc."
-    echo "[*] If unsure, or if you only have one hard drive, insert the letter \'a\'"
+    echo "[*] 'a' is the first HD, 'b' is the second, etc."
+    echo "[*] If unsure, or if you only have one hard drive, insert the letter 'a'"
     read -p "ZeroFillHD> " TARGET1
     sudo dd if=/dev/zero of=/dev/sd$TARGET1 bs=1M
 fi
@@ -90,8 +90,8 @@ then
     echo "[*] The command about to be executed is :"
     echo "[!] dd if=/dev/urandom of=/dev/sdX bs=1M"
     echo "[*] Replace X with the target drive letter."
-    echo "[*] \'a\' is the first HD, \'b\' is the second, etc."
-    echo "[*] If unsure, or if you only have one hard drive, insert the letter \'a\'"
+    echo "[*] 'a' is the first HD, 'b' is the second, etc."
+    echo "[*] If unsure, or if you only have one hard drive, insert the letter 'a'"
     read -p "RandFillHD> " TARGET2
     sudo dd if=/dev/urandom of=/dev/sd$TARGET2 bs=1M
 fi
@@ -102,8 +102,8 @@ then
     echo "[*] The command about to be executed is :"
     echo "[!] dd if=/dev/zero of=/dev/hdX bs=446 count=1"
     echo "[*] Replace X with the target drive letter."
-    echo "[*] \'a\' is the first HD, \'b\' is the second, etc."
-    echo "[*] If unsure, or if you only have one hard drive, insert the letter \'a\'"
+    echo "[*] 'a' is the first HD, 'b' is the second, etc."
+    echo "[*] If unsure, or if you only have one hard drive, insert the letter 'a'"
     read -p "WipeMBR> " TARGET3
     sudo dd if=/dev/zero of=/dev/hd$TARGET3 bs=446 count=1
 fi
@@ -114,10 +114,10 @@ then
     echo "[*] The command about to be executed is :"
     echo "[!] dd if=/dev/zero of=/dev/sdXY bs=446 count=1"
     echo "[*] Replace X with the target drive letter, Y with partition number"
-    echo "[*] \'a\' is the first HD, \'b\' is the second, etc."
-    echo "[*] \'1\' is the first partition, \'2\' the second, etc."
-    echo "[*] If unsure, or if you only have one hard drive, insert the letter \'a\'"
-    echo "[*] If unsure, or if you only have one disk partition, insert the number \'1\'"
+    echo "[*] 'a' is the first HD, 'b' is the second, etc."
+    echo "[*] '1' is the first partition, '2' the second, etc."
+    echo "[*] If unsure, or if you only have one hard drive, insert the letter 'a'"
+    echo "[*] If unsure, or if you only have one disk partition, insert the number '1'"
     read -p "TargetDrive> " TARGET4
     read -p "TargetPartition> " TARGET5
     sudo dd if=/dev/zero of=/dev/sd$TARGET4$TARGET5 bs=446 count=1
@@ -130,10 +130,10 @@ then
     echo "[*] The command about to be executed is :"
     echo "[!] dd if=/dev/zero of=/dev/sdXY bs=1M"
     echo "[*] Replace X with the target drive letter, Y with partition number"
-    echo "[*] \'a\' is the first HD, \'b\' is the second, etc."
-    echo "[*] \'1\' is the first partition, \'2\' the second, etc."
-    echo "[*] If unsure, or if you only have one hard drive, insert the letter \'a\'"
-    echo "[*] If unsure, or if you only have one disk partition, insert the number \'1\'"
+    echo "[*] 'a' is the first HD, 'b' is the second, etc."
+    echo "[*] '1' is the first partition, '2' the second, etc."
+    echo "[*] If unsure, or if you only have one hard drive, insert the letter 'a'"
+    echo "[*] If unsure, or if you only have one disk partition, insert the number '1'"
     read -p "TargetDrive> " TARGET6
     read -p "TargetPartition> " TARGET7
     sudo dd if=/dev/zero of=/dev/sd$TARGET6$TARGET7 bs=1M
@@ -146,12 +146,11 @@ then
     echo "[*] The command about to be executed is :"
     echo "[!] dd if=/dev/urandom of=/dev/sdXY bs=1M"
     echo "[*] Replace X with the target drive letter, Y with partition number"
-    echo "[*] \'a\' is the first HD, \'b\' is the second, etc."
-    echo "[*] \'1\' is the first partition, \'2\' the second, etc."
-    echo "[*] If unsure, or if you only have one hard drive, insert the letter \'a\'"
-    echo "[*] If unsure, or if you only have one disk partition, insert the number \'1\'"
+    echo "[*] 'a' is the first HD, 'b' is the second, etc."
+    echo "[*] '1' is the first partition, '2' the second, etc."
+    echo "[*] If unsure, or if you only have one hard drive, insert the letter 'a'"
+    echo "[*] If unsure, or if you only have one disk partition, insert the number '1'"
     read -p "TargetDrive> " TARGET8
     read -p "TargetPartition> " TARGET9
     sudo dd if=/dev/urandom of=/dev/sd$TARGET8$TARGET9 bs=1M
 fi
-
