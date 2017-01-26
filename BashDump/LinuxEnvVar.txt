@@ -1,0 +1,29 @@
+CDPATH                  BASH_VERSINFO[2]   HISTCMD            PPID
+HOME                    BASH_VERSINFO[3]   HISTCONTROL        PROMPT_COMMAND
+IFS                     BASH_VERSINFO[4]   HISTFILE           PROMPT_DIRTRIM
+MAIL                    BASH_VERSINFO[5]   HISTFILESIZE       PS3
+MAILPATH                BASH_VERSION       HISTIGNORE         PS4 
+OPTARG                  BASH_XTRACEFD      HISTSIZE           PWD
+OPTIND                  CHILD_MAX          HISTTIMEFORMAT     RANDOM
+PATH                    COLUMNS            HOSTFILE           READLINE_LINE
+PS1                     COMP_CWORD         HOSTNAME           READLINE_POINT
+PS2                     COMP_LINE          HOSTTYPE           REPLY
+BASH                    COMP_POINT         IGNOREEOF          SECONDS
+BASHOPTS                COMP_TYPE          INPUTRC            SHELL
+BASHPID                 COMP_KEY           LANG               SHELLOPTS
+BASH_ALIASES            COMP_WORDBREAKS    LC_ALL             SHLVL
+BASH_ARGC               COMP_WORDS         LC_COLLATE         TIMEFORMAT
+BASH_ARGV               WORDBREAKS         LC_CTYPE           TMOUT
+BASH_CMDS               COMPREPLY          LC_MESSAGES        TMPDIR
+BASH_COMMAND            COPROC             LC_NUMERIC         UID
+BASH_COMPAT             DIRSTACK           LINENO
+BASH_ENV                EMACS              LINES
+BASH_EXECUTION_STRING   ENV                MACHTYPE
+BASH_LINENO             EUID               MAILCHECK
+BASH_REMATCH           -FCEDIT             MAPFILE
+BASH_SOURCE             FIGNORE            OLDPWD
+BASH_SUBSHELL           FUNCNAME           OPTERR
+BASH_VERSINFO           FUNCNEST           OSTYPE
+BASH_VERSINFO[0]        GLOBIGNORE         PIPESTATUS
+BASH_VERSINFO[1]        GROUPS             POSIXLY_CORRECT
+
