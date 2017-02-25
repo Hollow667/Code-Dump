@@ -46,7 +46,7 @@ while :
 do
     nc -l -p 12345 | while read LINE
     do
-        CLIENT=`netstat | grep 12345 | cut -d' ' -f16`
+        CLIENT=`netstat | grep 12345 | cut -d' ' -f17`
         # Default is "Shell-access"
         SHELL_MATCH=$(echo $LINE | sha512sum | grep -c '870c042ce30e4908f0393eeb32b4b05f6644f597ceef71b8e93cf418fac01e5cea81f9a825ca3e5393d108919fa79dc15a27441c3a20af3b8a8d9aa2fb3d71ff')
        
