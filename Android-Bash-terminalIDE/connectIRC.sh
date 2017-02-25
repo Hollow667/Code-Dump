@@ -13,6 +13,6 @@ do
 	else
 		IP=`jping $opt`
 
-		BitchX -d -n Sepher $IP
+		BitchX -d -n MyUsername $IP
 	fi
 done
